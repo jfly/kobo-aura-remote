@@ -160,3 +160,6 @@ export DBUS_SESSION_BUS_ADDRESS=`/bin/dbus-daemon --session --print-address --fo
 /usr/local/Kobo/nickel -platform kobo -skipFontLoad &
 [ $PLATFORM != freescale ] && rm -rf /dev/mmcblk1* && udevadm trigger &
 insmod /drivers/$PLATFORM/misc/lowmem.ko &
+
+# See https://docs.google.com/document/d/1DQQgurlNPgf4qxYifug3TJm278hsK6S6bqwhEuO84X0/
+insmod /drivers/mx6sl-ntx/usb/gadget/g_ether.ko
